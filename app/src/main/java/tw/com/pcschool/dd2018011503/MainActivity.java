@@ -1,5 +1,6 @@
 package tw.com.pcschool.dd2018011503;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -31,5 +32,10 @@ public class MainActivity extends AppCompatActivity {
         String str = sp.getString("data1", "");
         TextView tv = (TextView) findViewById(R.id.textView);
         tv.setText(str);
+    }
+    public void clickSetting(View v)
+    {
+        Intent it = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(it);
     }
 }
